@@ -20,6 +20,7 @@ namespace Application.Features.Languages.Profiles
             CreateMap<Language, CreatedLanguageDto>().ReverseMap();
             CreateMap<Language, CreateLanguageCommand>().ReverseMap();
             CreateMap<IPaginate<Language>, LanguageListModel>().ReverseMap();
+            CreateMap<Language,LanguageListDto>().ReverseMap();
             CreateMap<Language, LanguageGetByIdDto>().ReverseMap();
             CreateMap<Language, DeletedLanguageDto>().ReverseMap();
             CreateMap<Language, UpdateLanguageCommand>().ReverseMap();
