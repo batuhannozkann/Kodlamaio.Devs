@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Core.Security.Entities;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Persistence.Configurations;
@@ -15,6 +16,14 @@ namespace Persistence.Contexts
     {
         IConfiguration Configuration;
         public DbSet<Language> Languages { get; set; }
+        public DbSet<Developer> Developers { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<OtpAuthenticator> OtpAuthenticators { get; set; }
+        public DbSet<Technology> Technologies { get; set; }
+        public DbSet<GitHubProfile> GitHubProfiles { get; set; }
         public BaseDbContext(IConfiguration configuration,DbContextOptions dbContextOptions):base(dbContextOptions)
         {
             Configuration = configuration;
@@ -23,6 +32,12 @@ namespace Persistence.Contexts
         {
             modelBuilder.SeedLanguage();
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new DeveloperConfiguration());
+            modelBuilder.ApplyConfiguration(new OperationClaimConfiguration());
+            modelBuilder.ApplyConfiguration(new UserOperationClaimConfiguration());
+            modelBuilder.ApplyConfiguration(new OtpAuthenticatorConfiguration());
+            modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
+            modelBuilder.ApplyConfiguration(new GitHubProfileConfiguration());
         }
 
         

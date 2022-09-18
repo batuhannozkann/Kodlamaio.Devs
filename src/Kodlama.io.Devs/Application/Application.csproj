@@ -17,7 +17,22 @@
 		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
 	</ItemGroup>
   <ItemGroup>
+    <Folder Include="Features\Developers\Commands\" />
+    <Folder Include="Features\GitHubProfile\Commands\" />
+    <Folder Include="Features\GitHubProfile\Constants\" />
+    <Folder Include="Features\GitHubProfile\Dtos\" />
+    <Folder Include="Features\GitHubProfile\Models\" />
+    <Folder Include="Features\GitHubProfile\Profiles\" />
+    <Folder Include="Features\GitHubProfile\Queries\" />
+    <Folder Include="Features\GitHubProfile\Rules\" />
     <Folder Include="Features\Languages\Constants\" />
+    <Folder Include="Features\Developers\Constants\" />
+    <Folder Include="Features\Developers\Models\" />
+    <Folder Include="Features\Developers\Dtos\" />
+    <Folder Include="Features\Developers\Rules\" />
+    <Folder Include="Features\Developers\Queries\" />
+    <Folder Include="Features\Developers\Profiles\" />
+    <Folder Include="Features\Technologies\Constants\" />
   </ItemGroup>
 
 </Project>

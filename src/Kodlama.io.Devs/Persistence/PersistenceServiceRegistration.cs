@@ -1,4 +1,5 @@
-﻿using Application.Services;
+﻿using Application.Features.Technologies.Profiles;
+using Application.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +23,7 @@ namespace Persistence
                 )
             );
             services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<ITechnologyRepository, TechnologyRepository>();
             return services;
         }
     }
