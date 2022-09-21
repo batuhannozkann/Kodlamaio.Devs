@@ -1,4 +1,5 @@
 ﻿using Application.Features.Developers.Rules;
+using Application.Features.GitHubProfiles.Rules;
 using Application.Features.Languages.Rules;
 using Application.Features.Technologies.Rules;
 using Core.Application.Pipelines.Authorization;
@@ -28,6 +29,7 @@ namespace Application
             services.AddScoped<LanguageBusinessRules>();
             services.AddScoped<TechnologyBusinessRules>();
             services.AddScoped<DeveloperBusinessRules>();
+            services.AddScoped<GitHubProfileBusinessRules>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));

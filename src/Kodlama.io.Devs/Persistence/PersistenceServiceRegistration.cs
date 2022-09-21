@@ -22,6 +22,7 @@ namespace Persistence
                 configuration.GetConnectionString("SqlConnectionString")
                 )
             );
+            services.AddScoped<IGitHubProfileRepository, GitHubProfileRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ITechnologyRepository, TechnologyRepository>();
             services.AddScoped<IDeveloperRepository, DeveloperRepository>();

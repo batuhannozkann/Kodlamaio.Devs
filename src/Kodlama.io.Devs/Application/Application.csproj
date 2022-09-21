@@ -18,13 +18,7 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
 	</ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\GitHubProfile\Commands\" />
-    <Folder Include="Features\GitHubProfile\Constants\" />
-    <Folder Include="Features\GitHubProfile\Dtos\" />
-    <Folder Include="Features\GitHubProfile\Models\" />
-    <Folder Include="Features\GitHubProfile\Profiles\" />
-    <Folder Include="Features\GitHubProfile\Queries\" />
-    <Folder Include="Features\GitHubProfile\Rules\" />
+    <Folder Include="Features\GitHubProfiles\Constants\" />
     <Folder Include="Features\Languages\Constants\" />
     <Folder Include="Features\Developers\Constants\" />
     <Folder Include="Features\Developers\Models\" />
