@@ -1,4 +1,5 @@
-﻿using Application.Features.Languages.Rules;
+﻿using Application.Features.Developers.Rules;
+using Application.Features.Languages.Rules;
 using Application.Features.Technologies.Rules;
 using Core.Application.Pipelines.Authorization;
 using Core.Application.Pipelines.Caching;
@@ -26,6 +27,7 @@ namespace Application
 
             services.AddScoped<LanguageBusinessRules>();
             services.AddScoped<TechnologyBusinessRules>();
+            services.AddScoped<DeveloperBusinessRules>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));

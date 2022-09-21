@@ -24,6 +24,9 @@ namespace Persistence
             );
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ITechnologyRepository, TechnologyRepository>();
+            services.AddScoped<IDeveloperRepository, DeveloperRepository>();
+            services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
+            services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
             return services;
         }
     }

@@ -9,6 +9,7 @@ using Application.Features.Languages.Models;
 using Application.Features.Languages.Queries.GetByIdLanguage;
 using Application.Features.Languages.Commands.DeleteLanguage;
 using Application.Features.Languages.Commands.UpdateLanguage;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
@@ -24,6 +25,7 @@ namespace WebAPI.Controllers
             return Created("", result);
         }
         [HttpGet("GetAllLanguage")]
+        [Authorize]
         public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
         {
             GetListLanguageQuery getListLanguageQuery = new() { PageRequest = pageRequest };
